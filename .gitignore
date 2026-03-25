@@ -39,3 +39,22 @@
 
 # debug information files
 *.dwo
+
+# Build folders
+build/
+cmake-build*/
+CMakeFiles/
+CMakeCache.txt
+
+# Compiled binaries
+*.o
+*.out
+*.so
+*.a
+
+# Python
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
