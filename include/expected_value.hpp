@@ -4,19 +4,20 @@
 #include <functional>
 
 class ExpectedValue {
+    // This class calculates the expected value of a dataset given a set of values, their corresponding probabilities, and a function to apply to the values.
     
-    public:
-    // Calculate the expected value of a dataset
-
+    private:
     const std::vector<double>& values;
     const std::vector<double>& probabilities;
     std::function<double(double)> f; // Function to apply to the values
 
-    static double calculate(const std::vector<double>& values, const std::vector<double>& probabilities, std::function<double(double)> f);
+    public:
+    // Calculate the expected value of a dataset
+    
+    ExpectedValue();
 
-    double get_expected_value() const {
-        return calculate(values, probabilities, f);
-    }
+    
+    static double calculate(const std::vector<double>& values, const std::vector<double>& probabilities, std::function<double(double)> f);
 };
 
 #endif // EXPECTED_VALUE_HH
